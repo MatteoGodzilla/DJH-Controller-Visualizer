@@ -34,7 +34,7 @@ function poll() {
         if (controller != null) {
             lastAxes = controller.axes
             lastButtons = controller.buttons
-            console.log(lastAxes)
+            //console.log(lastAxes)
         }
     }
     requestAnimationFrame(poll)
