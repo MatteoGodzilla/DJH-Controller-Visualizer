@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dj Hero Controller viewer</title>
+</head>
+
+<body>
+    <style>
+        * {
+            margin: 0px;
+        }
+
+        html,
+        body {
+            height: 100%;
+        }
+    </style>
+    <canvas id="canvas" width="800" height="600"></canvas>
+    <!-- <img src="./base.png" id="base" hidden="true"> -->
+    <img src="./images/final_render.png" id="base" hidden="true">
+    <img src="./images/final_render_flip.png" id="base_flip" hidden="true">
+    <img src="./images/mixer_base.png" id="mixer_base" hidden="true">
+    <img src="./images/platter_base_no_black.png" id="platter_base" hidden="true">
+    <img src="./images/crossfade_thingy.png" id="cross" hidden="true">
+    <!-- buttons  -->
+    <img src="./images/green_normal.png" id="green_normal" hidden="true">
+    <img src="./images/green_pressed.png" id="green_pressed" hidden="true">
+    <img src="./images/red_normal.png" id="red_normal" hidden="true">
+    <img src="./images/red_pressed.png" id="red_pressed" hidden="true">
+    <img src="./images/blue_normal.png" id="blue_normal" hidden="true">
+    <img src="./images/blue_pressed.png" id="blue_pressed" hidden="true">
+    
+    <br>
+
+    <input type="checkbox" id="platter">
+    <label for="platter"> Toggle Platter Left</label>
+    <br>
+    <input type="checkbox" id="buttons">
+    <label for="platter"> Toggle Buttons Right</label>
+    <p id="debug"></p>
+    <script src="./inputs.js"></script>
+</body>
+
+</html>
