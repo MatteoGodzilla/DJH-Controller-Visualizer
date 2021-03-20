@@ -113,22 +113,24 @@ function draw() {
     const sidebuttonsHeight = 81 * h / baseH
     const redbuttonHeight = 112 * h / baseH
 
-    ctx.drawImage(greenNorm, greenRadius - buttonWidth / 2, -sidebuttonsHeight / 2, buttonWidth, sidebuttonsHeight)
-    ctx.drawImage(redNorm, redRadius - buttonWidth / 2, -redbuttonHeight / 2, buttonWidth, redbuttonHeight)
-    ctx.drawImage(blueNorm, blueRadius - buttonWidth / 2, -sidebuttonsHeight / 2, buttonWidth, sidebuttonsHeight)
-
-    if(lastButtons.length > 1){
-        if(lastButtons[0].pressed){
+    if (lastButtons.length > 1) {
+        if (lastButtons[0].pressed) {
             ctx.drawImage(greenPress, greenRadius - buttonWidth / 2, -sidebuttonsHeight / 2, buttonWidth, sidebuttonsHeight)
+        } else {
+            ctx.drawImage(greenNorm, greenRadius - buttonWidth / 2, -sidebuttonsHeight / 2, buttonWidth, sidebuttonsHeight)
         }
-        if(lastButtons[1].pressed){
+        if (lastButtons[1].pressed) {
             ctx.drawImage(redPress, redRadius - buttonWidth / 2, -redbuttonHeight / 2, buttonWidth, redbuttonHeight)
+        } else {
+            ctx.drawImage(redNorm, redRadius - buttonWidth / 2, -redbuttonHeight / 2, buttonWidth, redbuttonHeight)
         }
-        if(lastButtons[2].pressed){
+        if (lastButtons[2].pressed) {
             ctx.drawImage(bluePress, blueRadius - buttonWidth / 2, -sidebuttonsHeight / 2, buttonWidth, sidebuttonsHeight)
+        } else {
+            ctx.drawImage(blueNorm, blueRadius - buttonWidth / 2, -sidebuttonsHeight / 2, buttonWidth, sidebuttonsHeight)
         }
     }
-    
+
     ctx.setTransform(1, 0, 0, 1, 0, 0)
 }
 
