@@ -9,6 +9,7 @@ const res = [
     "images/red_pressed.png",
     "images/blue_normal.png",
     "images/blue_pressed.png",
+    "images/euphoria_pressed.png"
 ]
 
 const baseW = 819
@@ -30,6 +31,7 @@ class Rend {
         this.redPressed = new PIXI.Sprite()
         this.blueNormal = new PIXI.Sprite()
         this.bluePressed = new PIXI.Sprite()
+        this.euph = new PIXI.Sprite()
 
         PIXI.Loader.shared.add(res).load(() => {
             /*
@@ -101,6 +103,12 @@ class Rend {
             app.stage.addChild(this.redPressed)
             app.stage.addChild(this.blueNormal)
             app.stage.addChild(this.bluePressed)
+
+            this.euph = new PIXI.Sprite(PIXI.Loader.shared.resources["images/euphoria_pressed.png"].texture)
+            this.euph.width = 50 * padWidth / baseW
+            this.euph.height = 50 * padHeight / baseH
+            this.euph.anchor.set(0.5,0.5)
+            app.stage.addChild(this.euph)
         })
     }
 
@@ -129,6 +137,15 @@ class Rend {
 
         if (data && data[1]) {
             this.crossfade.x += data[1] * 64 * padWidth / baseW
+        }
+
+        this.euph.x = basePointMixer.x - 64 * padWidth / baseW
+        this.euph.y = basePointMixer.y - 64 * padHeight / baseH
+
+        if(data && data[5]){
+            this.euph.alpha = 1
+        } else {
+            this.euph.alpha = 0
         }
 
         //platter

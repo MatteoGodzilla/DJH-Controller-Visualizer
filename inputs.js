@@ -7,7 +7,8 @@ const xboxMapping = {
     "maxCrossfade": -1,
     "g": 0,
     "r": 1,
-    "b": 2
+    "b": 2,
+    "euph":3
 }
 
 const ps3Mapping = {
@@ -19,7 +20,8 @@ const ps3Mapping = {
     "maxCrossfade": 1,
     "g": 0,
     "r": 1,
-    "b": 2
+    "b": 2,
+    "euph":3
 }
 
 const wiiMapping = {
@@ -31,7 +33,8 @@ const wiiMapping = {
     "maxCrossfade": 1,
     "g": 0,
     "r": 1,
-    "b": 2
+    "b": 2,
+    "euph":3
 }
 
 class Poller {
@@ -44,7 +47,7 @@ class Poller {
     poll() {
         let controller = navigator.getGamepads()[this.selectedGamepad]
         if (controller != null) {
-            //scratch, crossfade, g, r,b
+            //scratch, crossfade, g, r, b, euphoria
             let scratch = controller.axes[this.selectedMapping.scratch]
             scratch = (Math.abs(scratch) > 0.00005 ? scratch : 0)
             this.pad[0] = (scratch - this.selectedMapping.minScratch) / (this.selectedMapping.maxScratch - this.selectedMapping.minScratch)
@@ -53,6 +56,7 @@ class Poller {
             this.pad[2] = controller.buttons[this.selectedMapping.g].pressed
             this.pad[3] = controller.buttons[this.selectedMapping.r].pressed
             this.pad[4] = controller.buttons[this.selectedMapping.b].pressed
+            this.pad[5] = controller.buttons[this.selectedMapping.euph].pressed
         }
     }
 }
