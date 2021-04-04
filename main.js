@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2021 MatteoGodzilla
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 let app = new PIXI.Application({width:800,height:600,backgroundColor:0xffff00})
 document.body.appendChild(app.view)
 
