@@ -1,3 +1,7 @@
+// SPDX-FileCopyrightText: 2021 MatteoGodzilla
+//
+// SPDX-License-Identifier: GPL-3.0-or-later
+
 const res = [
     "images/mixer_base.png",
     "images/platter_base_no_black.png",
