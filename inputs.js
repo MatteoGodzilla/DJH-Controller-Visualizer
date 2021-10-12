@@ -32,7 +32,7 @@ class Poller {
     constructor() {
         this.pad = [] //data used by renderer
         this.selectedGamepad = 0 //set by user
-        this.selectedMapping = wiiMapping // can also be ps3, based on user
+        this.selectedMapping = xboxMapping // can also be ps3, based on user
     }
 
     poll() {
