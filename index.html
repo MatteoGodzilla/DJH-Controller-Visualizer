@@ -22,11 +22,7 @@ SPDX-License-Identifier: GPL-3.0-or-later
         }
     </style>
 
-    <!-- Scripts -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.0.0/browser/pixi.min.js"></script>
-    <script src="./renderer.js"></script>
-    <script src="./inputs.js"></script>
-    <script src="./main.js"></script>
+    <canvas id="viewport"></canvas>
 
     <br>
     <input type="checkbox" id="platter">
@@ -34,6 +30,19 @@ SPDX-License-Identifier: GPL-3.0-or-later
     <br>
     <input type="checkbox" id="buttons">
     <label for="buttons"> Toggle Buttons Right</label>
+    <br>
+    <select name="mapping type" id="mapping">
+        <option value="xbox">Xbox Table Mapping</option>
+        <option value="wii">Wii/Raphnet Table Mapping</option>
+    </select>
+    <br>
+    <br>
+    <button id="generate">Generate config Link</button>
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pixi.js/6.0.0/browser/pixi.min.js"></script>
+    <script src="./renderer.js"></script>
+    <script src="./inputs.js"></script>
+    <script src="./main.js"></script>
 </body>
 
 </html>

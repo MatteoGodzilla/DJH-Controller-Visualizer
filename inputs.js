@@ -15,37 +15,24 @@ const xboxMapping = {
     "euph":3
 }
 
-const ps3Mapping = {
-    "scratch": 1,
-    "minScratch": -0.02,
-    "maxScratch": 0.02,
-    "crossfade": 3,
-    "minCrossfade": -1,
-    "maxCrossfade": 1,
-    "g": 0,
-    "r": 1,
-    "b": 2,
-    "euph":3
-}
-
 const wiiMapping = {
-    "scratch": 1,
-    "minScratch": -0.02,
-    "maxScratch": 0.02,
-    "crossfade": 3,
+    "scratch": 3,
+    "minScratch": -1.5,
+    "maxScratch": 1.5,
+    "crossfade": 5,
     "minCrossfade": -1,
     "maxCrossfade": 1,
-    "g": 0,
-    "r": 1,
-    "b": 2,
-    "euph":3
+    "g": 3,
+    "r": 4,
+    "b": 5,
+    "euph":6
 }
 
 class Poller {
     constructor() {
         this.pad = [] //data used by renderer
         this.selectedGamepad = 0 //set by user
-        this.selectedMapping = xboxMapping // can also be ps3, based on user
+        this.selectedMapping = wiiMapping // can also be ps3, based on user
     }
 
     poll() {
