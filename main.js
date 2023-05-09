@@ -55,5 +55,5 @@ generate.addEventListener("click",(ev)=>{
     }
 
     let link = new URLSearchParams(data);
-    alert("Use the following link in OBS\n" + window.location.origin + window.location.pathname + "/?" + link.toString())
+    alert("Use the following link in OBS\n" + window.location.origin + window.location.pathname + "?" + link.toString())
 })
